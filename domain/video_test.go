@@ -1,12 +1,13 @@
 package domain_test
 
+// Импортирование
 import (
-	"encoder/domain"
-	"testing"
-	"time"
+	"encoder/domain" //Библиотека для кодирования
+	"testing"        //Библиотека для автоматизированного тестирования Go пакетов
+	"time"           //Библиотека для измерения и показа времени
 
-	uuid "github.com/satori/go.uuid"
-	"github.com/stretchr/testify/require"
+	uuid "github.com/satori/go.uuid"      //Библиотека обеспечивает реализацию UUID
+	"github.com/stretchr/testify/require" //Библиотека реализовывает некоторые assert
 )
 
 func TestValidateIfVideoIsEmpty(t *testing.T) {

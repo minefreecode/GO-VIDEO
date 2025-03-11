@@ -1,16 +1,17 @@
-package repositories
+package repositories // Package repositories Основной реализующий пакет проекта
 
 import (
-	"encoder/domain"
-	"fmt"
+	"encoder/domain" // библиотека для кодирования
+	"fmt"            //Библиотека для форматированного ввода/вывода
 
-	"github.com/jinzhu/gorm"
-	uuid "github.com/satori/go.uuid"
+	"github.com/jinzhu/gorm"         //Библиотека для ORM, для работы с Базами Данных
+	uuid "github.com/satori/go.uuid" //Библиотека реализующая UUID
 )
 
+// VideoRepository Тип для работы с репозиториями Баз Данных
 type VideoRepository interface {
-	Insert(video *domain.Video) (*domain.Video, error)
-	Find(id string) (*domain.Video, error)
+	Insert(video *domain.Video) (*domain.Video, error) // Для вставки видео
+	Find(id string) (*domain.Video, error)             // Для поиска видео
 }
 
 type VideoRepositoryDb struct {
