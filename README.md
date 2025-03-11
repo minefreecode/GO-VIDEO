@@ -1,2 +1,5 @@
-# golang-video-encoder
-Microsserviço de Encoder de Vídeo com Go Lang
+Описание кодов
+
+Начальный скрипт Go `video.go`
+
+Тесты Go `video_test.go`
