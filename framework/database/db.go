@@ -30,8 +30,8 @@ func NewDatabase() *Database {
 func NewDatabaseTest() *gorm.DB {
 	dbInstance := NewDatabase()
 	dbInstance.Env = "test"
-	dbInstance.DbTypeTest = "sqlite3"
-	dbInstance.DsnTest = ":memory:"
+	dbInstance.DbTypeTest = "sqlite3" //Тип БД
+	dbInstance.DsnTest = ":memory:"   //В памяти
 	dbInstance.AutoMigrateDb = true
 	dbInstance.Debug = true
 
