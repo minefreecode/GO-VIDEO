@@ -47,7 +47,7 @@ func (repo VideoRepositoryDb) Find(id string) (*domain.Video, error) {
 	//Загрузка Джобов из Баз Данных по условию, что id совпадает с id видео
 	repo.Db.Preload("Jobs").First(&video, "id = ?", id)
 
-	//Нсли видео не найдено сообщаем об этом возвращая значение из функции
+	//Если видео не найдено сообщаем об этом возвращая значение из функции
 	if video.ID == "" {
 		return nil, fmt.Errorf("video does not exist")
 	}
